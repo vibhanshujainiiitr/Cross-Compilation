@@ -70,3 +70,26 @@ $ aarch64-linux-gnu-gcc helloworld.c -o helloworld-aarch64 -static
 $ file helloworld-aarch64
 helloworld-aarch64: ELF 64-bit LSB executable, ARM aarch64, version 1 (GNU/Linux), statically linked, BuildID[sha1]=c8e1ce459df806249e2e40bbb80d26a0cc8a8543, for GNU/Linux 3.7.0, not stripped
 ```
+- MIPS
+```
+$ mips-linux-gnu-gcc helloworld.c -o helloworld-mips -static
+
+$ file helloworld-mips
+helloworld-mips: ELF 32-bit MSB executable, MIPS, MIPS32 rel2 version 1 (SYSV), statically linked, BuildID[sha1]=e7a5d8790f9e45365027c8d0dff1529c93a39f48, for GNU/Linux 3.2.0, not stripped
+```
+
+- Alpha
+```
+$ alpha-linux-gnu-gcc helloworld.c -o helloworld-alpha -static
+
+$ file helloworld-alpha
+helloworld-alpha: ELF 64-bit LSB executable, Alpha (unofficial), version 1 (SYSV), statically linked, BuildID[sha1]=9b14d1c75e0e51e004296ab037427a5ffcf48ad9, for GNU/Linux 3.2.0, not stripped
+```
+
+- Sparc
+```
+$ sparc64-linux-gnu-gcc helloworld.c -o helloworld-sparc -static
+
+$ file helloworld-sparc
+helloworld-sparc: ELF 64-bit MSB executable, SPARC V9, Sun UltraSPARC1 Extensions Required, relaxed memory ordering, version 1 (SYSV), statically linked, BuildID[sha1]=8ed0vibhanshu@LAPTOP-DDGIF99C:~$
+```
