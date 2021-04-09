@@ -20,6 +20,18 @@ Produces only the file which contains machine level code as output<br>
 ```gcc main.c -o main.o```<br>
 It will come to produce the output as main.o object file<br>
 
+- Warnings<br>
+```gcc -Wall main.c -o main ```<br>
+To show all the warnings in GCC<br>
+
+- Time Macros<br>
+```gcc -DMY_MACROS main.c -o main```<br>
+This option enabled the define compile time macros in code<br>
+Here MY_MACROS is defined user in the code<br>
+
+- Version Details<br>
+``` gcc -v main.c -o main ```<br>
+This is used to print the version used during the compilation<br>
 
 ## Compiler Frontend
 A compiler basically turns the code into an intermediate stage which is between the machine level instructions and the high level instructions. <br>
@@ -50,12 +62,22 @@ And many more
 ## Compiling for different architecture
 
 - x86_64<br>
+
+GCC
 ```
 $ gcc helloworld.c -o helloworld-x86_64
 
 $ file helloworld-x86_64
 helloworld-x86_64: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=d0c90e797106a0a6d6f8f72cf428638c1b1bc790, for GNU/Linux 3.2.0, not stripped
 ```
+LLVM<br>
+```
+vibhanshu@LAPTOP-DDGIF99C:~$ clang --target=x86_64-linux-gnu helloworld.c -o x86_64
+vibhanshu@LAPTOP-DDGIF99C:~$ file x86_64
+x86_64: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=7fcc4d389511173554f0a87fd10ce6ddeb29b9fb, for GNU/Linux 3.2.0, not stripped
+```
+
+
 - 32 bit ARM
 ```
 $ arm-linux-gnueabi-gcc helloworld.c -o helloworld-arm -static
