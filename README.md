@@ -47,4 +47,26 @@ Frontend supported by LLVM
 - Fortan
 And many more
 
+## Compiling for different architecture
 
+- x86_64<br>
+```
+$ gcc helloworld.c -o helloworld-x86_64
+
+$ file helloworld-x86_64
+helloworld-x86_64: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=d0c90e797106a0a6d6f8f72cf428638c1b1bc790, for GNU/Linux 3.2.0, not stripped
+```
+- 32 bit ARM
+```
+$ arm-linux-gnueabi-gcc helloworld.c -o helloworld-arm -static
+
+$ file helloworld-arm
+helloworld-arm: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, BuildID[sha1]=ae974c9365d4d28bd07cd770b8580ef8314a50f9, for GNU/Linux 3.2.0, not stripped
+```
+- 64 bit ARM
+```
+$ aarch64-linux-gnu-gcc helloworld.c -o helloworld-aarch64 -static
+
+$ file helloworld-aarch64
+helloworld-aarch64: ELF 64-bit LSB executable, ARM aarch64, version 1 (GNU/Linux), statically linked, BuildID[sha1]=c8e1ce459df806249e2e40bbb80d26a0cc8a8543, for GNU/Linux 3.7.0, not stripped
+```
