@@ -104,6 +104,14 @@ vibhanshu@LAPTOP-DDGIF99C:~$ ls
 helloworld.c  without_optimization
 vibhanshu@LAPTOP-DDGIF99C:~$ file without_optimization
 without_optimization: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=d0c90e797106a0a6d6f8f72cf428638c1b1bc790, for GNU/Linux 3.2.0, not stripped
+
+
+vibhanshu@LAPTOP-DDGIF99C:~$ time ./helloworld
+Hi, I am Vibhanshu Jain!
+
+real    0m0.018s
+user    0m0.000s
+sys     0m0.000s
 ```
 
 - O 
@@ -111,6 +119,14 @@ without_optimization: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dy
 vibhanshu@LAPTOP-DDGIF99C:~$ gcc helloworld.c -o O_optimization -O
 vibhanshu@LAPTOP-DDGIF99C:~$ file O_optimization
 O_optimization: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=a7a76f3c0c7419620410143c4e47fe99ba8a8201, for GNU/Linux 3.2.0, not stripped
+
+
+vibhanshu@LAPTOP-DDGIF99C:~$ time ./O_optimization
+Hi, I am Vibhanshu Jain!
+
+real    0m0.020s
+user    0m0.000s
+sys     0m0.000s
 ```
 
 - O1
@@ -118,6 +134,14 @@ O_optimization: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamica
 vibhanshu@LAPTOP-DDGIF99C:~$ gcc helloworld.c -o O1_optimization -O1
 vibhanshu@LAPTOP-DDGIF99C:~$ file O1_optimization
 O1_optimization: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=a7a76f3c0c7419620410143c4e47fe99ba8a8201, for GNU/Linux 3.2.0, not stripped
+
+
+vibhanshu@LAPTOP-DDGIF99C:~$ time ./O1_optimization
+Hi, I am Vibhanshu Jain!
+
+real    0m0.019s
+user    0m0.000s
+sys     0m0.000s
 ```
 
 - O2
@@ -125,6 +149,13 @@ O1_optimization: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamic
 vibhanshu@LAPTOP-DDGIF99C:~$ gcc helloworld.c -o O2_optimization -O2
 vibhanshu@LAPTOP-DDGIF99C:~$ file O2_optimization
 O2_optimization: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=49e440e5f0d5102cc2e71f85bdd4038d58e88ddc, for GNU/Linux 3.2.0, not stripped
+
+vibhanshu@LAPTOP-DDGIF99C:~$ time ./O2_optimization
+Hi, I am Vibhanshu Jain!
+
+real    0m0.019s
+user    0m0.000s
+sys     0m0.000s
 ```
 
 - O3
@@ -132,6 +163,13 @@ O2_optimization: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamic
 vibhanshu@LAPTOP-DDGIF99C:~$ gcc helloworld.c -o O3_optimization -O3
 vibhanshu@LAPTOP-DDGIF99C:~$ file O3_optimization
 O3_optimization: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=49e440e5f0d5102cc2e71f85bdd4038d58e88ddc, for GNU/Linux 3.2.0, not stripped
+
+vibhanshu@LAPTOP-DDGIF99C:~$ time ./O3_optimization
+Hi, I am Vibhanshu Jain!
+
+real    0m0.021s
+user    0m0.000s
+sys     0m0.000s
 ```
 
 - Os
@@ -139,6 +177,12 @@ O3_optimization: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamic
 vibhanshu@LAPTOP-DDGIF99C:~$ gcc helloworld.c -o Os_optimization -Os
 vibhanshu@LAPTOP-DDGIF99C:~$ file Os_optimization
 Os_optimization: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=653c878bee55bc1c9fe3cf048ba3015b8265172a, for GNU/Linux 3.2.0, not stripped
-```
 
--Oz
+
+vibhanshu@LAPTOP-DDGIF99C:~$ time ./Os_optimization
+Hi, I am Vibhanshu Jain!
+
+real    0m0.018s
+user    0m0.000s
+sys     0m0.016s
+```
