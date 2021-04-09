@@ -96,6 +96,8 @@ helloworld-sparc: ELF 64-bit MSB executable, SPARC V9, Sun UltraSPARC1 Extension
 
 
 ## Optimizations
+There are several optimizations method. Most common are using the level, O0, O1, O2 and so on. The numerical digit indicates the level of optimization, higher the value more is the optimization.<br>
+
 
 - Without Optimization
 ```
@@ -113,6 +115,7 @@ real    0m0.018s
 user    0m0.000s
 sys     0m0.000s
 ```
+The code is compiled normally
 
 - O 
 ```
@@ -128,6 +131,7 @@ real    0m0.020s
 user    0m0.000s
 sys     0m0.000s
 ```
+This is same optimization level O1
 
 - O1
 ```
@@ -143,6 +147,7 @@ real    0m0.019s
 user    0m0.000s
 sys     0m0.000s
 ```
+This will optimize minimally.
 
 - O2
 ```
@@ -157,6 +162,7 @@ real    0m0.019s
 user    0m0.000s
 sys     0m0.000s
 ```
+This will optimize more
 
 - O3
 ```
@@ -171,6 +177,7 @@ real    0m0.021s
 user    0m0.000s
 sys     0m0.000s
 ```
+This will optimize even more
 
 - Os
 ```
@@ -186,3 +193,7 @@ real    0m0.018s
 user    0m0.000s
 sys     0m0.016s
 ```
+This is used for optimizing size of the code along with the optimization level of O2 that do not increases the size.
+
+- Oz<br> 
+This is one more optimization level which works only for OSx systems. This is used for further optimizing the size more aggressively. 
