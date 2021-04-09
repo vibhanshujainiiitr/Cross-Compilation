@@ -9,7 +9,7 @@ This will create an executable file a.out<br>
 This will produce output file as main<br>
 
 - Assembly Output<br>
-```gcc -S main.c > main.s```<br>
+```gcc -S main.c```<br>
 Produces only the file which contains assembly output<br>
 
 - Machine level Output<br>
