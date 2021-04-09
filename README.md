@@ -85,21 +85,36 @@ $ arm-linux-gnueabi-gcc helloworld.c -o helloworld-arm -static
 $ file helloworld-arm
 helloworld-arm: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, BuildID[sha1]=ae974c9365d4d28bd07cd770b8580ef8314a50f9, for GNU/Linux 3.2.0, not stripped
 ```
-- 64 bit ARM
+- 64 bit ARM<br>
+GCC
 ```
 $ aarch64-linux-gnu-gcc helloworld.c -o helloworld-aarch64 -static
 
 $ file helloworld-aarch64
 helloworld-aarch64: ELF 64-bit LSB executable, ARM aarch64, version 1 (GNU/Linux), statically linked, BuildID[sha1]=c8e1ce459df806249e2e40bbb80d26a0cc8a8543, for GNU/Linux 3.7.0, not stripped
 ```
-- MIPS
+
+LLVM
+```
+vibhanshu@LAPTOP-DDGIF99C:~$ clang --target=aarch64-linux-gnu helloworld.c -o arm64
+vibhanshu@LAPTOP-DDGIF99C:~$ file arm64
+arm64: ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID[sha1]=39f188cb11b9338a426d67a784d465910c3c655f, for GNU/Linux 3.7.0, not stripped
+```
+- MIPS<br>
+
+GCC
 ```
 $ mips-linux-gnu-gcc helloworld.c -o helloworld-mips -static
 
 $ file helloworld-mips
 helloworld-mips: ELF 32-bit MSB executable, MIPS, MIPS32 rel2 version 1 (SYSV), statically linked, BuildID[sha1]=e7a5d8790f9e45365027c8d0dff1529c93a39f48, for GNU/Linux 3.2.0, not stripped
 ```
-
+LLVM
+```
+$ clang --target=mips-linux-gnu helloworld.c -o mips
+$ file mips
+mips: ELF 32-bit MSB executable, MIPS, MIPS32 rel2 version 1 (SYSV), dynamically linked, interpreter /lib/ld.so.1, BuildID[sha1]=af02bfc9863efcf7fe3377012d860681055f5f68, for GNU/Linux 3.2.0, not stripped
+```
 - Alpha
 ```
 $ alpha-linux-gnu-gcc helloworld.c -o helloworld-alpha -static
