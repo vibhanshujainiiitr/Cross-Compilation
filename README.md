@@ -2,6 +2,7 @@
 These  are the command line options to change the default operations while executing a certain program. These are highly case-sensitive. They didn’t help in compiling your program though help in controlling different aspects of the application. 
 These are helpful in the things are code generation, optimization, controlling the name location and type of output file, and many more.
 
+### GCC
 - o flag<br>
 ```gcc main.cpp```<br>
 This will create an executable file a.out<br>
@@ -32,6 +33,24 @@ Here MY_MACROS is defined user in the code<br>
 - Version Details<br>
 ``` gcc -v main.c -o main ```<br>
 This is used to print the version used during the compilation<br>
+
+### LLVM
+
+- o<br>
+Specify the output file name
+
+- S<br>
+Same as GCC, writes output in LLVM intermediate language.
+
+- stats<br>
+Print the statistics 
+
+- debug<br>
+Print out the code which uses LLVM_DEBUG() macro.<br>
+Similar to D in GCC
+
+- p <br>
+Prints module after each tranformation.
 
 ## Compiler Frontend
 A compiler basically turns the code into an intermediate stage which is between the machine level instructions and the high level instructions. <br>
