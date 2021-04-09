@@ -49,9 +49,6 @@ Print the statistics
 Print out the code which uses LLVM_DEBUG() macro.<br>
 Similar to D in GCC
 
-- p <br>
-Prints module after each tranformation.
-
 ## Compiler Frontend
 A compiler basically turns the code into an intermediate stage which is between the machine level instructions and the high level instructions. <br>
 There are several frontends of compilers which basically convert the code into an intermediate level from where it will be converted to machine level instructions which are converted with the backend. The backends are basically the intermediate between the frontend and machine level code. There are several backends like x86 and MIPS CPU. <br>
